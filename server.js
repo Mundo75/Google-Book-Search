@@ -12,8 +12,17 @@ app.use(routes);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlesearch", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds351107.mlab.com:51107/heroku_vgv0t32m", {
+  useNewUrlParser: true
+}, error => {
+  if(error) {
+    console.log(error);
+  } else {
+    console.log("connected to the database");
+  }
+});
 
 // Start the API server
 app.listen(PORT, function() {
