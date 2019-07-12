@@ -7,11 +7,10 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public/build"));
 app.use(routes);
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+
 mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds351107.mlab.com:51107/heroku_vgv0t32m", {
