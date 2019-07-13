@@ -25,7 +25,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.6.4"
+    "mongoose": "^5.6.4",
+    "nodejs-latest": "^1.1.0"
   },
   "devDependencies": {
     "concurrently": "^4.1.1",
