@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Jumbotron from "./components/Jumbotron";
 import NavBar from "./components/Nav";
 import Books from "./pages/Books";
+import Stylesheet from "./components/Stylesheet";
 
 
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <Router>
       <div>
+        <Stylesheet />
         <NavBar/>
         <Jumbotron />
         <Switch>
