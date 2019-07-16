@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Jumbotron from "./components/Jumbotron";
+import Jumbotron from "./components/jumbotron";
 import NavBar from "./components/Nav";
 import Books from "./pages/Books";
 import Stylesheet from "./components/Stylesheet";
